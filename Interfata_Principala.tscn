@@ -1,0 +1,84 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Bahnschrift.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Buton START.gd" type="Script" id=2]
+
+[node name="Interfata_Principala" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panou" type="Panel" parent="."]
+anchor_right = 0.998
+anchor_bottom = 1.0
+margin_right = 0.0479736
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Titlu" type="Label" parent="Panou"]
+anchor_top = 0.122
+anchor_right = 1.0
+anchor_bottom = 0.177
+margin_left = 8.0
+margin_top = -0.200005
+margin_right = -1.0
+margin_bottom = -0.199997
+custom_fonts/font = ExtResource( 1 )
+text = "SIMULAREA ARUNCARII A DOUA ZARURI"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Descriere" type="Label" parent="Panou"]
+anchor_left = 0.004
+anchor_top = 0.292
+anchor_right = 1.0
+anchor_bottom = 0.383
+margin_left = -0.0880003
+margin_top = 14.8
+margin_right = 1.0
+margin_bottom = 15.2
+custom_fonts/font = ExtResource( 1 )
+text = "Scopul aplicatiei consta in determinarea numarului de duble 
+obtinute din maxim 6 incercari"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Indicatie" type="Label" parent="Panou"]
+anchor_left = 0.008
+anchor_top = 0.662
+anchor_right = 0.998
+anchor_bottom = 0.705
+margin_left = -0.176001
+margin_top = -0.200012
+margin_right = 0.0439453
+margin_bottom = -3.05176e-05
+custom_fonts/font = ExtResource( 1 )
+text = "Apasati butonul START pentru a putea incepe!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buton START" type="Button" parent="Panou"]
+anchor_left = 0.448
+anchor_top = 0.793
+anchor_right = 0.556
+anchor_bottom = 0.857
+margin_left = 0.143982
+margin_top = 0.199982
+margin_right = -0.232056
+margin_bottom = 1.79999
+text = "START"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Panou/Buton START" to="Panou/Buton START" method="_on_Buton_START_pressed"]
